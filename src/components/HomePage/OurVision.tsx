@@ -6,7 +6,7 @@ const OurVision: React.FC = () => {
   return (
     <section className="container">
       {/* Title */}
-      <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center">
         Our Vision: A Flourishing Future for East India
       </h2>
 
@@ -34,7 +34,7 @@ const OurVision: React.FC = () => {
 
         {/* Right: Image card */}
         <div className="rounded-2xl border border-zinc-200 shadow-sm overflow-hidden">
-          <div className="relative aspect-[4/3]">
+          <div className="relative aspect-[3/3]">
             <Image
               src="/vision.png" // Place your image at /public/vision.jpg or change this path
               alt="Glowing map of India representing a flourishing, connected future"

@@ -1,11 +1,12 @@
 // components/Why.tsx
 import React from "react";
+import Image from "next/image";
 
 const Why: React.FC = () => {
   return (
     <section className="container">
       {/* Title */}
-      <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
+      <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
         Why Ranchi? The Gateway to East India
       </h2>
 
@@ -27,16 +28,15 @@ const Why: React.FC = () => {
         </div>
 
         {/* Right: placeholder for image */}
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
-          <div className="aspect-[4/3] w-full bg-zinc-200" />
-          {/* Replace the above div with your <Image /> later, e.g.:
-            <Image
-              src="/ranchi.jpg"
+        <div className="rounded-2xl border border-zinc-200 shadow-sm overflow-hidden">
+          <div className="relative aspect-[3/3]">
+          <Image
+              src="/ranchi.png"
               alt="Aerial view of Ranchi city and lake"
               fill
               className="object-cover"
             />
-          */}
+        </div>
         </div>
       </div>
 

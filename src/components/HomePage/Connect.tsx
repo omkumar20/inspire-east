@@ -1,22 +1,27 @@
-// components/Connect.tsx
+'use client';
 import React from "react";
+import Image from "next/image";
 
-const Card: React.FC<{ icon: React.ReactNode; title: string; children: React.ReactNode }> = ({
-  icon,
-  title,
-  children,
-}) => (
-  <div className="relative rounded-xl border border-zinc-300 bg-white shadow-sm">
-    {/* Top bar with icon */}
-    <div className="absolute -top-6 left-1/2 flex -translate-x-1/2 items-center justify-center">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-white shadow-md">
-        {icon}
+/* --- Icon Card Component --- */
+const Card: React.FC<{
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+}> = ({ icon, title, children }) => (
+  <div className="relative rounded-md border border-red-300 bg-white shadow-sm pt-14 px-6 pb-6 overflow-visible">
+    {/* Top red bar */}
+    <div className="absolute top-0 left-0 h-2 w-full bg-red-500 rounded-t-md" />
+
+    {/* Floating Icon */}
+    <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md border-4 border-red-500">
+        <div className="text-red-500">{icon}</div>
       </div>
     </div>
-    <div className="px-6 pt-8 pb-6">
-      <h3 className="text-lg font-semibold text-zinc-900">{title}</h3>
-      <div className="mt-2 text-indigo-700">{children}</div>
-    </div>
+
+    {/* Content */}
+    <h3 className="text-lg font-semibold text-zinc-800">{title}</h3>
+    <div className="mt-2 text-red-600 font-semibold">{children}</div>
   </div>
 );
 
@@ -35,48 +40,54 @@ const MailIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+/* --- Main Component --- */
 const Connect: React.FC = () => {
   return (
-    <section className="container">
-      {/* Title */}
-      <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
+    <section className="container px-4 py-20">
+      {/* Heading */}
+      <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
         Connect With Us
       </h2>
 
-      {/* Content grid */}
-      <div className="mt-12 grid gap-10 md:grid-cols-2">
-        {/* Left: Contact cards */}
-        <div className="space-y-12">
+      {/* Grid */}
+      <div className="mt-12 grid gap-10 md:grid-cols-2 items-start">
+        {/* Left: Contact Info */}
+        <div className="space-y-10">
           <Card icon={<GlobeIcon className="h-6 w-6" />} title="Website">
-            <span className="text-zinc-500">unknown link</span>
+            <a
+              href="https://inspireeast.in"
+              className="hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              inspireeast.in
+            </a>
           </Card>
 
           <Card icon={<MailIcon className="h-6 w-6" />} title="Email">
             <a
               href="mailto:contact@inspireeast.in"
-              className="font-medium text-indigo-700 hover:underline"
+              className="hover:underline"
             >
               contact@inspireeast.in
             </a>
           </Card>
         </div>
 
-        {/* Right: Image placeholder */}
+        {/* Right: Image */}
         <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
-          <div className="aspect-square w-full bg-zinc-200" />
-          {/* Replace placeholder with actual image later
-            <Image
-              src="/connect.jpg"
-              alt="Event branding graphic"
-              fill
-              className="object-cover"
-            />
-          */}
+          <Image
+            src="/connect.png"
+            alt="Connect illustration"
+            width={800}
+            height={800}
+            className="object-cover w-full h-auto"
+          />
         </div>
       </div>
 
-      {/* Closing line */}
-      <p className="mt-12 text-lg text-zinc-800">
+      {/* Footer Text */}
+      <p className="mt-12 text-xl text-zinc-800">
         We welcome your inquiries and look forward to your participation.
       </p>
     </section>

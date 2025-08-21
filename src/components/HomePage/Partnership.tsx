@@ -10,7 +10,7 @@ const Partnership: React.FC = () => {
   return (
     <section className="container">
       {/* Title */}
-      <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
+      <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
         Partnerships &amp; Collaborations
       </h2>
 
