@@ -36,7 +36,7 @@ const DateTime: React.FC = () => {
     <section className="container mx-auto px-6 py-16 text-center">
       {/* Title */}
       <h2
-        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-10"
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-10"
         data-aos="fade-down"
       >
         Inspire East Conclave: Ranchi 2024
