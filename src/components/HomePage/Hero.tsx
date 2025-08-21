@@ -28,19 +28,20 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Left Section: Text (comes second on mobile) */}
-        <div className="order-2 md:order-1" data-aos="fade-right">
-          <h1 className="text-3xl sm:text-4xl font-bold leading-snug tracking-tight text-zinc-900 md:text-5xl lg:text-6xl">
-            Inspire East Conclave:
-            <br className="hidden sm:block" />
-            Catalyzing Progress
+        <div
+          className="order-2 md:order-1 text-center md:text-left max-w-3xl mx-auto md:mx-0"
+          data-aos="fade-right"
+        >
+          <h1 className="text-6xl sm:text-4xl font-extrabold leading-snug tracking-tight text-zinc-900 md:text-5xl lg:text-6xl">
+            Inspire East Conclave  
           </h1>
 
-          <p className="mt-6 sm:mt-8 max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
+          <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-zinc-600">
             Join us for a groundbreaking event fostering dialogue, innovation,
             and community in East India.
           </p>
 
-          <div className="mt-8 sm:mt-12 flex flex-wrap items-center gap-4 sm:gap-6">
+          <div className="mt-8 sm:mt-12 flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
             {/* Learn More - Filled */}
             <a
               href="#learn-more"

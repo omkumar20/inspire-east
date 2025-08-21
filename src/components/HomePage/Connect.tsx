@@ -1,6 +1,9 @@
 'use client';
-import React from "react";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 /* --- Icon Card Component --- */
 const Card: React.FC<{
@@ -8,7 +11,10 @@ const Card: React.FC<{
   title: string;
   children: React.ReactNode;
 }> = ({ icon, title, children }) => (
-  <div className="relative rounded-md border border-red-300 bg-white shadow-sm pt-14 px-6 pb-6 overflow-visible">
+  <div
+    className="relative rounded-md border border-red-300 bg-white shadow-sm pt-14 px-6 pb-6 overflow-visible"
+    data-aos="fade-up"
+  >
     {/* Top red bar */}
     <div className="absolute top-0 left-0 h-2 w-full bg-red-500 rounded-t-md" />
 
@@ -42,15 +48,25 @@ const MailIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 /* --- Main Component --- */
 const Connect: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <section className="container px-4 py-20">
-      {/* Heading */}
-      <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
-        Connect With Us
-      </h2>
+      {/* Centered Heading */}
+      <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+          Connect With Us
+        </h2>
+      </div>
 
       {/* Grid */}
-      <div className="mt-12 grid gap-10 md:grid-cols-2 items-start">
+      <div
+        className="mt-12 grid gap-10 md:grid-cols-2 items-start"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         {/* Left: Contact Info */}
         <div className="space-y-10">
           <Card icon={<GlobeIcon className="h-6 w-6" />} title="Website">
@@ -75,7 +91,11 @@ const Connect: React.FC = () => {
         </div>
 
         {/* Right: Image */}
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
+        <div
+          className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <Image
             src="/connect.png"
             alt="Connect illustration"
@@ -87,7 +107,11 @@ const Connect: React.FC = () => {
       </div>
 
       {/* Footer Text */}
-      <p className="mt-12 text-xl text-zinc-800">
+      <p
+        className="mt-12 text-xl text-zinc-800 text-center max-w-3xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         We welcome your inquiries and look forward to your participation.
       </p>
     </section>
