@@ -1,3 +1,4 @@
+import Footer from "@/components/Header/Footer";
 import Header from "@/components/Header/Header";
 import Connect from "@/components/HomePage/Connect";
 import DateTime from "@/components/HomePage/DateTime";
@@ -24,6 +25,7 @@ export default function Home() {
     <Partnership/>
     <Connect/>
     <JoinUs/>
+    <Footer/>
     </>
 
   );
