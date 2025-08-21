@@ -47,18 +47,18 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand/Blurb */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
+          <div className="md:col-span-2 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-2">
               <StarRoundedIcon className="text-red-600" fontSize="medium" />
               <span className="text-lg font-bold tracking-tight text-zinc-900">Inspire East</span>
             </div>
-            <p className="mt-4 max-w-prose text-zinc-700">
+            <p className="mt-4 max-w-prose text-zinc-700 mx-auto md:mx-0">
               Fostering dialogue, innovation, and community to unlock East India’s potential.
               Join us in building a future that’s inclusive, ambitious, and collaborative.
             </p>
 
             {/* Socials */}
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-6 flex items-center justify-center md:justify-start gap-4">
               <a href="#" aria-label="Twitter / X" className="text-zinc-600 hover:text-red-600 transition-colors">
                 <TwitterIcon fontSize="medium" />
               </a>
@@ -75,9 +75,9 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-zinc-900 font-semibold">Quick Links</h4>
-            <ul className="mt-4 grid grid-cols-2 gap-y-2">
+            <ul className="mt-4 grid grid-cols-2 gap-y-2 justify-items-center md:justify-items-start">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
@@ -93,14 +93,14 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-zinc-900 font-semibold">Contact</h4>
             <ul className="mt-4 space-y-3 text-zinc-700">
-              <li className="flex items-center gap-2">
+              <li className="flex items-center justify-center md:justify-start gap-2">
                 <EmailOutlinedIcon fontSize="small" className="text-zinc-600" />
                 hello@example.com
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center justify-center md:justify-start gap-2">
                 <LocationOnOutlinedIcon fontSize="small" className="text-zinc-600" />
                 Ranchi, Jharkhand
               </li>
@@ -120,9 +120,9 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-zinc-200 bg-white/70">
-        <div className="max-w-[1280px] mx-auto px-4 h-12 flex items-center justify-between text-sm text-zinc-600">
+        <div className="max-w-[1280px] mx-auto px-4 h-auto py-4 sm:h-12 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 text-sm text-zinc-600 text-center sm:text-left">
           <span>© {year} Inspire East. All rights reserved.</span>
-          <span className="hidden sm:inline flex items-center gap-1">
+          <span className="flex items-center gap-1">
             Made with <FavoriteIcon fontSize="small" className="text-red-600" /> for East India.
           </span>
         </div>
