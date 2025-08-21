@@ -1,12 +1,34 @@
-import React from "react";
+'use client'
+import React, { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section className="container px-4 py-16 sm:py-20">
       <div className="grid items-center gap-12 md:grid-cols-2">
-        {/* Left Section */}
-        <div>
+        
+        {/* Right: Image (comes first on mobile) */}
+        <div className="order-1 md:order-2" data-aos="fade-left">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
+            <Image
+              src="/hero.png"
+              alt="Sunrise over mountains with a winding river"
+              width={1280}
+              height={960}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Left Section: Text (comes second on mobile) */}
+        <div className="order-2 md:order-1" data-aos="fade-right">
           <h1 className="text-3xl sm:text-4xl font-bold leading-snug tracking-tight text-zinc-900 md:text-5xl lg:text-6xl">
             Inspire East Conclave:
             <br className="hidden sm:block" />
@@ -34,20 +56,6 @@ const Hero: React.FC = () => {
             >
               Contact Us
             </a>
-          </div>
-        </div>
-
-        {/* Right: Image */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm">
-            <Image
-              src="/hero.png"
-              alt="Sunrise over mountains with a winding river"
-              width={1280}
-              height={960}
-              className="w-full h-auto object-cover"
-              priority
-            />
           </div>
         </div>
       </div>
