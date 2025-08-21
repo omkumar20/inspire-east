@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="container px-4 py-16 sm:py-20">
+    <section className="max-w-[1280px] mx-auto pt-4 pb-8 sm:pb-16">
       <div className="grid items-center gap-12 md:grid-cols-2">
         
         {/* Right: Image (comes first on mobile) */}
