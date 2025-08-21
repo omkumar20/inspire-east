@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import Connect from "@/components/HomePage/Connect";
 import DateTime from "@/components/HomePage/DateTime";
 import Discussion from "@/components/HomePage/Discussion";
@@ -13,6 +14,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
+    <Header/>
     <Hero/>
     <OurMission/>
     <OurVision/>

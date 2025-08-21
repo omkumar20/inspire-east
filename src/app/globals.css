@@ -5,5 +5,9 @@
 }
 
 .container {
-  @apply max-w-[1280px] mx-auto py-12 px-3;
+  @apply max-w-[1280px] mx-auto py-16 px-3;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* header height */
 }
