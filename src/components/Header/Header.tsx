@@ -64,7 +64,7 @@ export default function Header() {
       role="banner"
     >
       {/* BAR — hard height 80px, no vertical padding */}
-      <div className="container mx-auto px-4 h-20 min-h-0 py-0">
+      <div className="max-w-[1280px] mx-auto px-4 h-20 min-h-0 py-0">
         <div className="flex h-full items-center justify-between">
           {/* Logo (normal size) */}
           <a
@@ -116,10 +116,10 @@ export default function Header() {
         className={[
           "md:hidden overflow-hidden border-t border-zinc-100",
           "transition-[max-height] duration-300 ease-in-out",
-          open ? "max-h-80" : "max-h-0",
+          open ? "max-h-[480px]" : "max-h-0",
         ].join(" ")}
       >
-        <nav className="container mx-auto px-4 py-1.5">
+        <nav className="max-w-[1280px] mx-auto px-4">
           <ul className="flex flex-col">
             {navItems.map((item) => (
               <li key={item.href}>

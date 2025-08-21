@@ -9,7 +9,6 @@ import OurVision from "@/components/HomePage/OurVision";
 import Partnership from "@/components/HomePage/Partnership";
 import Speakers from "@/components/HomePage/Speakers";
 import Why from "@/components/HomePage/Why";
-import Image from "next/image";
 
 export default function Home() {
   return (
