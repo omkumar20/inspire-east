@@ -72,14 +72,11 @@ export default function Header() {
             className="flex items-center gap-2"
             onClick={(e) => handleNavClick(e, "#hero")}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" className="text-red-600" aria-hidden="true">
-              <path d="M12 2l3.5 6.5L22 10l-5 4 1.5 7L12 17l-6.5 4L7 14l-5-4 6.5-1.5L12 2z" fill="currentColor" />
-            </svg>
-            <span className="text-lg font-bold tracking-tight text-zinc-900">
-              Inspire&nbsp;East
+            <img src="/logo1.png" alt="Inspire East Logo" className="w-[60px] h-[60px] object-contain" />
+            <span className="text-xl font-extrabold tracking-tight text-zinc-900">
+              INSPIRE&nbsp;EAST
             </span>
           </a>
-
           {/* Desktop nav (normal size) */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
