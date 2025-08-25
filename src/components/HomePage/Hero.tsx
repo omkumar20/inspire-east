@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           data-aos="fade-right"
         >
           <h1 className="text-6xl sm:text-4xl font-extrabold leading-snug tracking-tight text-zinc-900 md:text-5xl lg:text-6xl">
-            Inspire East Conclave  
+            Inspire East Conclave Ranchi 2025
           </h1>
 
           <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-zinc-600">
